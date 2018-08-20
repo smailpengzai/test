@@ -1,0 +1,20 @@
+syntax = "proto3";
+package protoDir;
+service Greeter{
+//简单 RPC
+rpc GetValue(InsertKey)returns(GetoutValue){}
+rpc MapTest()
+//服务器端流式 RPC
+//客户端流式 RPC
+//双向流式 RPC
+}
+
+message InsertKey {
+    string key = 1;
+    string name = 2;
+}
+
+message GetoutValue{
+    string value = 1;
+    int64 index =2;
+}
